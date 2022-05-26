@@ -15,7 +15,7 @@ body {
 .global {
   /* height: 500px; */
   width: 35%;
-  height: 550px;
+  /* height: 550px; */
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -41,8 +41,8 @@ p {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 27px;
   text-align: center;
   color: #555555;
 }
@@ -90,14 +90,14 @@ input:hover {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
   text-align: center;
   color: #ffffff;
   height: 50px;
-  width: 220px;
+  width: 40%;
   border: none;
-  margin-bottom: 30px;
+  margin-bottom: 90px;
   box-shadow: 0 5px 3px #dddddd;
 }
 
@@ -273,4 +273,194 @@ input:hover {
 .borderradio {
   border: 1px solid #028a3d !important;
   height: 50px;
+}
+
+/* Media Query */
+@media (max-width: 300px) {
+  .global,
+  .global-questions,
+  .resultat {
+    margin: 0px;
+  }
+}
+@media (min-width: 301px) and (max-width: 414px) {
+  .global,
+  .global-questions,
+  .resultat {
+    width: 95%;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  p,
+  label {
+    font-size: 14px;
+  }
+  .button button {
+    width: 90px;
+    height: 40px;
+    font-size: 12px;
+  }
+  .div-opt label {
+    margin-left: 0px;
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+  .name-resultat {
+    font-size: 10px;
+  }
+  .mail-resultat {
+    font-size: 5px;
+  }
+  .navigation {
+    flex-wrap: wrap;
+  }
+  .button .btacceuil {
+    width: 70px !important;
+  }
+}
+@media screen and (min-width: 415px) and (max-width: 560px) {
+  .global,
+  .global-questions,
+  .resultat {
+    width: 80%;
+  }
+  .button button {
+    width: 100px;
+    height: 40px;
+    font-size: 13px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  p,
+  label {
+    font-size: 15px;
+  }
+  .name-resultat {
+    font-size: 20px;
+  }
+  .mail-resultat {
+    font-size: 10px;
+  }
+  .button .btacceuil {
+    width: 90px !important;
+  }
+  .div-opt label {
+    padding-left: 0px;
+    padding-bottom: 5px;
+    font-size: 15px;
+  }
+  .navigation {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 560px) and (max-width: 630px) {
+  .global,
+  .global-questions,
+  .resultat {
+    width: 75%;
+  }
+  .button {
+    text-align: center;
+  }
+  .button button {
+    width: 130px;
+    height: 40px;
+    font-size: 16px;
+  }
+  label {
+    font-size: 15px;
+  }
+  .name-resultat {
+    font-size: 20px;
+  }
+  .mail-resultat {
+    font-size: 10px;
+  }
+  .button .btacceuil {
+    width: 90px !important;
+  }
+  .navigation {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 630px) and (max-width: 700px) {
+  .global,
+  .global-questions,
+  .resultat {
+    width: 65%;
+  }
+  .button button {
+    width: 130px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .button button {
+    width: 130px;
+    height: 40px;
+    font-size: 16px;
+  }
+  label {
+    font-size: 15px;
+  }
+  .name-resultat {
+    font-size: 20px;
+  }
+  .mail-resultat {
+    font-size: 10px;
+  }
+  .button .btacceuil {
+    width: 90px !important;
+  }
+  /* .navigation {
+    flex-wrap: wrap;
+  } */
+}
+@media screen and (min-width: 700px) and (max-width: 820px) {
+  .global,
+  .global-questions,
+  .resultat {
+    width: 60%;
+  }
+  .quitter {
+    margin-left: 10px;
+  }
+  .button button {
+    width: 130px;
+    height: 40px;
+    font-size: 16px;
+  }
+  /* .navigation {
+    flex-wrap: wrap;
+  } */
+}
+@media screen and (min-width: 820px) and (max-width: 900px) {
+  .global,
+  .global-questions,
+  .resultat {
+    width: 55%;
+  }
+  .quitter {
+    margin-left: 10px;
+  }
+  .button button {
+    width: 130px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 992px) {
+  .global,
+  .global-questions,
+  .resultat {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .global,
+  .global-questions,
+  .resultat {
+    width: 35%;
+  }
 }

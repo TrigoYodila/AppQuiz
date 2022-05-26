@@ -379,7 +379,7 @@ function debuter() {
       progress.style.width = counter * 1.6667 + "%";
     }
   }
-  intervalId = setInterval(progression, 50); //1000
+  intervalId = setInterval(progression, 1000); //1000
 }
 
 //rendre le bouton suivant accessible
