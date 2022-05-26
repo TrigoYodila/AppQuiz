@@ -205,18 +205,17 @@ next.addEventListener("click", () => {
 
   let resfinal = 0;
   debuter(); /* Redemarrage du compteur */
-  if (id < 4) {
+  if (id < 14) {
     result = ischecked(id);
     id++;
     // alert("reponse " + result);
     //Test de l'assertion coché
     if (result == true) NbreReussite++;
-    alert("reussite " + NbreReussite);
     iterate(id);
-    text.textContent = id + 1 + "/5";
+    text.textContent = id + 1 + "/15";
     //appel de la méthode inaccess
   } else {
-    id = 4;
+    id = 14;
     result = ischecked(id);
     if (result == true) NbreReussite++; //
     Affichage();
@@ -356,7 +355,7 @@ function debuter() {
         }
       }
       //si on a pas atteint la fin
-      if (id < 4) {
+      if (id < 14) {
         resetborder();
         resetbulle();
         iterate(takeid + 1);
@@ -370,7 +369,7 @@ function debuter() {
         reset_radio("radios");
         inaccessButtonTimer();
       } else {
-        id = 4; //14
+        id = 14; //14
         result = ischecked(id);
         if (result == true) NbreReussite++; //
         Affichage();
