@@ -100,6 +100,7 @@ const Questions = [
       { text: "onfocus", isCorrect: false },
     ],
   },
+  
   {
     id: 10,
     q: "Quelle déclaration fournit la valeur d'une fonction ?",
