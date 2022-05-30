@@ -112,6 +112,7 @@ input:hover {
   background: #fff;
   display: none;
 }
+
 .options {
   margin: 0 30px;
   margin-bottom: 30px;
@@ -417,7 +418,6 @@ input:hover {
   .global-questions,
   .resultat {
     width: 390px;
-    /* height: 600px; */
     margin-top: 200px;
   }
   .navigation {
@@ -429,7 +429,6 @@ input:hover {
   .global-questions,
   .resultat {
     width: 420px;
-    /* height: 600px; */
     margin-top: 260px;
   }
 }
@@ -438,7 +437,6 @@ input:hover {
   .global-questions,
   .resultat {
     width: 410px;
-    /* height: 600px; */
     margin-top: 340px;
   }
 }
@@ -447,7 +445,6 @@ input:hover {
   .global-questions,
   .resultat {
     width: 410px;
-    /* height: 600px; */
     margin-top: 0px;
   }
 }
