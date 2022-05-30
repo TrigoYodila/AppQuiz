@@ -1,4 +1,4 @@
-// Questions will be asked
+// Tableau des questionnaires
 const Questions = [
   {
     id: 0,
@@ -100,6 +100,7 @@ const Questions = [
       { text: "onfocus", isCorrect: false },
     ],
   },
+  
   {
     id: 10,
     q: "Quelle déclaration fournit la valeur d'une fonction ?",
@@ -152,7 +153,7 @@ const Questions = [
   },
 ];
 var start = true; //start
-/* ciblage des options */
+/* ciblage des options et leurs labels */
 const op2 = document.querySelector("#option2");
 const op1 = document.querySelector("#option1");
 const op3 = document.querySelector("#option3");
@@ -161,7 +162,7 @@ const op2lbl = document.querySelector(".option2"); // label d'options
 const op1lbl = document.querySelector(".option1");
 const op3lbl = document.querySelector(".option3");
 const op4lbl = document.querySelector(".option4");
-//Fonction Iterate
+//Fonction Iterate pour parcourir toutes les questions
 function iterate(id) {
   const question = document.querySelector(".question-text"); // Getting the question
   question.textContent = Questions[id].q; // Setting the question text
@@ -185,15 +186,13 @@ const globalR = document.querySelector(".resultat");
 const globalop = document.querySelector(".global-questions");
 const btnCommencer = document.querySelector("#btcommencer");
 const content = document.querySelector(".global");
-//const content_op = document.querySelector(".global-questions");
 //recuperation number
 const text = document.querySelector(".question-number");
 const textfinal = document.querySelector(".text-result");
 //nom et email
 const nom = document.querySelector(".name-class");
 const email = document.querySelector(".email-class");
-// const nomR = document.querySelector("name-resultat");
-// const mailR = document.querySelector("mail-resultat");
+
 let id = 0;
 let NbreReussite = 0;
 let result;
@@ -208,12 +207,10 @@ next.addEventListener("click", () => {
   if (id < 14) {
     result = ischecked(id);
     id++;
-    // alert("reponse " + result);
     //Test de l'assertion coché
     if (result == true) NbreReussite++;
-    alert("reussite " + NbreReussite);
     iterate(id);
-    text.textContent = id + 1 + "/5";
+    text.textContent = id + 1 + "/15";
     //appel de la méthode inaccess
   } else {
     id = 14;
@@ -262,11 +259,11 @@ btnCommencer.addEventListener("click", function (event) {
     erreurEmail.style.display = "none";
   });
 });
-
+//fonction pour rafraichir la page
 function refresh() {
   location.reload();
 }
-
+//fonction de la validation
 function valid() {
   const erreurName = document.querySelector(".erreur-nom");
   const erreurEmail = document.querySelector(".erreur-mail");
@@ -380,7 +377,7 @@ function debuter() {
       progress.style.width = counter * 1.6667 + "%";
     }
   }
-  intervalId = setInterval(progression, 50); //1000
+  intervalId = setInterval(progression, 1000); //1000
 }
 
 //rendre le bouton suivant accessible
