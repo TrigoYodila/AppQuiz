@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
     <div class="global">
       <div class="title">
         <h1>JavaScript Quiz</h1>
@@ -41,7 +40,7 @@
             class="name-class"
             id="nom"
             placeholder="Joseph"
-            onkeyup="makeletters(this)"
+            onkeyup="effacerChiffre(this)"
           /><br />
           <div class="erreur">
             <span class="text-erreur erreur-nom"
@@ -50,7 +49,7 @@
             >
           </div>
         </div>
-
+        
         <div class="input-email">
           <label for="email" class="label-email">Email</label><br />
           <input
@@ -83,8 +82,8 @@
         <div class="progress" id="progress"></div>
       </div>
 
-      <div class="options" id="radios">
-        <div class="div-opt">
+      <div class="question-options" id="radios">
+        <div class="conteneur-reponse">
           <input
             type="radio"
             name="reponse"
@@ -94,7 +93,7 @@
           ><span class="Soption1 all"></span>
         </div>
 
-        <div class="div-opt">
+        <div class="conteneur-reponse">
           <input
             type="radio"
             name="reponse"
@@ -104,7 +103,7 @@
           ><span class="Soption2 all"></span>
         </div>
 
-        <div class="div-opt">
+        <div class="conteneur-reponse">
           <input
             type="radio"
             name="reponse"
@@ -114,7 +113,7 @@
           ><span class="Soption3 all"></span>
         </div>
 
-        <div class="div-opt">
+        <div class="conteneur-reponse">
           <input
             type="radio"
             name="reponse"

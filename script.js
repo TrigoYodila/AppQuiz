@@ -1,9 +1,8 @@
-// Tableau des questionnaires
 const Questions = [
   {
     id: 0,
-    q: "Quel est le type d'un fichier javascript ?",
-    a: [
+    question: "Quel est le type d'un fichier javascript ?",
+    assertions: [
       { text: ".ts", isCorrect: false },
       { text: ".jsx", isCorrect: false },
       { text: ".js", isCorrect: true },
@@ -12,8 +11,8 @@ const Questions = [
   },
   {
     id: 1,
-    q: "Dans quelle balise plaçons nous le javascript ?",
-    a: [
+    question: "Dans quelle balise plaçons nous le javascript ?",
+    assertions: [
       { text: "<html>", isCorrect: false },
       { text: "<style>", isCorrect: false },
       { text: "<body>", isCorrect: false },
@@ -22,8 +21,8 @@ const Questions = [
   },
   {
     id: 2,
-    q: "Qui est le père fondateur de javascript ?",
-    a: [
+    question: "Qui est le père fondateur de javascript ?",
+    assertions: [
       { text: "Brendan Eich", isCorrect: true },
       { text: "Tim beerners Lee", isCorrect: false },
       { text: "Mark Zuckeberg", isCorrect: false },
@@ -32,8 +31,8 @@ const Questions = [
   },
   {
     id: 3,
-    q: "Javascript est utilisé actuellement :",
-    a: [
+    question: "Javascript est utilisé actuellement :",
+    assertions: [
       { text: "du côté client seulement", isCorrect: false },
       { text: "du côté client et du côté serveur", isCorrect: true },
       { text: "du côté serveur seulement", isCorrect: false },
@@ -42,8 +41,8 @@ const Questions = [
   },
   {
     id: 4,
-    q: "Comment écrivez vous hello world dans une boite d'alerte ?",
-    a: [
+    question: "Comment écrivez vous hello world dans une boite d'alerte ?",
+    assertions: [
       { text: "msg('hello world')", isCorrect: false },
       { text: "msgbox('hello world')", isCorrect: false },
       { text: "alert('hello world')", isCorrect: true },
@@ -52,8 +51,8 @@ const Questions = [
   },
   {
     id: 5,
-    q: "Comment inserer un commentaire sur plusieurs lignes ?",
-    a: [
+    question: "Comment inserer un commentaire sur plusieurs lignes ?",
+    assertions: [
       { text: "/* commentaire */", isCorrect: true },
       { text: "//commentaire ", isCorrect: false },
       { text: "' commentaire '", isCorrect: false },
@@ -62,8 +61,8 @@ const Questions = [
   },
   {
     id: 6,
-    q: "Comment trouvez vous la plus grande valeur de a et b ?",
-    a: [
+    question: "Comment trouvez vous la plus grande valeur de a et b ?",
+    assertions: [
       { text: "Math.ceil(a,b)", isCorrect: false },
       { text: "Math.max(a,b)", isCorrect: true },
       { text: "ceil(a,b)", isCorrect: false },
@@ -72,8 +71,8 @@ const Questions = [
   },
   {
     id: 7,
-    q: "Quelle est la syntaxe correcte de la boucle for ?",
-    a: [
+    question: "Quelle est la syntaxe correcte de la boucle for ?",
+    assertions: [
       { text: "for (i <= 10; i++)", isCorrect: false },
       { text: "for i = 1 to 10", isCorrect: false },
       { text: "for (i = 0; i <= 10)", isCorrect: false },
@@ -82,8 +81,8 @@ const Questions = [
   },
   {
     id: 8,
-    q: "Lequel n'est pas un opérateur de comparaison ?",
-    a: [
+    question: "Lequel n'est pas un opérateur de comparaison ?",
+    assertions: [
       { text: "<", isCorrect: false },
       { text: ">", isCorrect: false },
       { text: "=", isCorrect: true },
@@ -92,19 +91,19 @@ const Questions = [
   },
   {
     id: 9,
-    q: "Quel événement est spécifique au clavier ?",
-    a: [
+    question: "Quel événement est spécifique au clavier ?",
+    assertions: [
       { text: "onkeypress", isCorrect: true },
       { text: "onkeydown", isCorrect: false },
       { text: "onclick", isCorrect: false },
       { text: "onfocus", isCorrect: false },
     ],
   },
-  
+
   {
     id: 10,
-    q: "Quelle déclaration fournit la valeur d'une fonction ?",
-    a: [
+    question: "Quelle déclaration fournit la valeur d'une fonction ?",
+    assertions: [
       { text: "cancel", isCorrect: false },
       { text: "return", isCorrect: true },
       { text: "continue", isCorrect: false },
@@ -113,8 +112,8 @@ const Questions = [
   },
   {
     id: 11,
-    q: "Quelle méthode renvoie le caractère à l'index specifié ?",
-    a: [
+    question: "Quelle méthode renvoie le caractère à l'index specifié ?",
+    assertions: [
       { text: "characterAt()", isCorrect: false },
       { text: "getcharAt()", isCorrect: true },
       { text: "getAt()", isCorrect: false },
@@ -123,8 +122,8 @@ const Questions = [
   },
   {
     id: 12,
-    q: "Lequel des éléments suivants n’est pas un événement de souris ?",
-    a: [
+    question: "Lequel des éléments suivants n’est pas un événement de souris ?",
+    assertions: [
       { text: "onmousescroller()", isCorrect: true },
       { text: "onclick()", isCorrect: false },
       { text: "onmouseover()", isCorrect: false },
@@ -133,8 +132,8 @@ const Questions = [
   },
   {
     id: 13,
-    q: "Comment savoir le nombre d’éléments d’un formulaire ?",
-    a: [
+    question: "Comment savoir le nombre d’éléments d’un formulaire ?",
+    assertions: [
       { text: "document.myform.elements.count", isCorrect: false },
       { text: "document.myform.length", isCorrect: false },
       { text: "document.myform.elements.length", isCorrect: true },
@@ -143,8 +142,9 @@ const Questions = [
   },
   {
     id: 14,
-    q: "Laquelle des fonctions suivantes trie les éléments d’un tableau ?",
-    a: [
+    question:
+      "Laquelle des fonctions suivantes trie les éléments d’un tableau ?",
+    assertions: [
       { text: "toSource()", isCorrect: false },
       { text: "toString()", isCorrect: false },
       { text: "unShift()", isCorrect: false },
@@ -153,80 +153,94 @@ const Questions = [
   },
 ];
 var start = true; //start
-/* ciblage des options et leurs labels */
-const op2 = document.querySelector("#option2");
-const op1 = document.querySelector("#option1");
-const op3 = document.querySelector("#option3");
-const op4 = document.querySelector("#option4");
-const op2lbl = document.querySelector(".option2"); // label d'options
-const op1lbl = document.querySelector(".option1");
-const op3lbl = document.querySelector(".option3");
-const op4lbl = document.querySelector(".option4");
-//Fonction Iterate pour parcourir toutes les questions
-function iterate(id) {
-  const question = document.querySelector(".question-text"); // Getting the question
-  question.textContent = Questions[id].q; // Setting the question text
-  // Providing option text
-  op1lbl.textContent = Questions[id].a[0].text;
-  op2lbl.textContent = Questions[id].a[1].text;
-  op3lbl.textContent = Questions[id].a[2].text;
-  op4lbl.textContent = Questions[id].a[3].text;
-  // Providing the true or false value to the options
-  op1.value = Questions[id].a[0].isCorrect;
-  op2.value = Questions[id].a[1].isCorrect;
-  op3.value = Questions[id].a[2].isCorrect;
-  op4.value = Questions[id].a[3].isCorrect;
-}
-// Next button and method
-const next = document.querySelector(".suivant");
-const quitter = document.querySelector(".quitter");
-const accueil = document.querySelector(".btacceuil");
-//ciblage des blocs
-const globalR = document.querySelector(".resultat");
-const globalop = document.querySelector(".global-questions");
-const btnCommencer = document.querySelector("#btcommencer");
-const content = document.querySelector(".global");
-//recuperation number
-const text = document.querySelector(".question-number");
-const textfinal = document.querySelector(".text-result");
-//nom et email
+
 const nom = document.querySelector(".name-class");
 const email = document.querySelector(".email-class");
 
-let id = 0;
-let NbreReussite = 0;
-let result;
-//Button suivant
-next.addEventListener("click", () => {
-  //annuler le cochage
-  resetborder();
-  resetbulle();
+const question = document.querySelector(".question-text");
 
-  let resfinal = 0;
-  debuter(); /* Redemarrage du compteur */
-  if (id < 14) {
-    result = ischecked(id);
-    id++;
-    //Test de l'assertion coché
-    if (result == true) NbreReussite++;
-    iterate(id);
-    text.textContent = id + 1 + "/15";
-    //appel de la méthode inaccess
-  } else {
-    id = 14;
-    result = ischecked(id);
-    if (result == true) NbreReussite++; //
-    Affichage();
-  }
+const option2 = document.querySelector("#option2");
+const option1 = document.querySelector("#option1");
+const option3 = document.querySelector("#option3");
+const option4 = document.querySelector("#option4");
+
+const labelOption2 = document.querySelector(".option2");
+const labelOption1 = document.querySelector(".option1");
+const labelOption3 = document.querySelector(".option3");
+const labelOption4 = document.querySelector(".option4");
+
+const btnSuivant = document.querySelector(".suivant");
+const btnQuitter = document.querySelector(".quitter");
+const btnaccueil = document.querySelector(".btacceuil");
+
+const globalResultat = document.querySelector(".resultat");
+const globalQuestions = document.querySelector(".global-questions");
+const btnCommencer = document.querySelector("#btcommencer");
+const global = document.querySelector(".global");
+
+const numeroQuestion = document.querySelector(".question-number");
+const textResultat = document.querySelector(".text-result");
+
+const inputs = document.querySelectorAll("input");
+
+const progress = document.querySelector("#progress");
+const time = document.querySelector(".time-counter");
+
+function parcoursQuestions(id) {
+  question.textContent = Questions[id].question;
+  labelOption1.textContent = Questions[id].assertions[0].text;
+  labelOption2.textContent = Questions[id].assertions[1].text;
+  labelOption3.textContent = Questions[id].assertions[2].text;
+  labelOption4.textContent = Questions[id].assertions[3].text;
+
+  option1.value = Questions[id].assertions[0].isCorrect;
+  option2.value = Questions[id].assertions[1].isCorrect;
+  option3.value = Questions[id].assertions[2].isCorrect;
+  option3.value = Questions[id].assertions[3].isCorrect;
+}
+
+let id = 0;
+let nbreReussite = 0;
+let resultat;
+
+btnSuivant.addEventListener("click", () => {
+  annulerBordure();
+  ModifierBulle();
+  calculResultat();
   reset_radio("radios");
-  inaccessButton();
+  rendreBtnInaccessible();
 });
 
-//fonction affichage
-function Affichage() {
+function calculResultat() {
+  let resultatFinal = 0;
+  debuter();
+  if (id < 14) {
+    resultat = ischecked(id);
+    id++;
+    if (resultat == true) nbreReussite++;
+    parcoursQuestions(id);
+    numeroQuestion.textContent = id + 1 + "/15";
+    chargerTexteButton();
+  } else {
+    derniereQuestion();
+  }
+}
+
+function chargerTexteButton() {
+  if (id == 14) {
+    btnSuivant.textContent = "Terminer";
+  }
+}
+function derniereQuestion() {
+  id = 14;
+  resultat = ischecked(id);
+  if (resultat == true) nbreReussite++;
+  affichageResultat();
+}
+
+function affichageResultat() {
   let iconereussite = document.querySelector("i");
-  //test pour recupérere le resultat final
-  let pourcentage = Math.round((NbreReussite * 100) / 15);
+  let pourcentage = Math.round((nbreReussite * 100) / 15);
   if (pourcentage >= 50) {
     iconereussite.classList.add(
       "fa-regular",
@@ -236,206 +250,185 @@ function Affichage() {
   } else {
     iconereussite.classList.add("fa-regular", "fa-circle-xmark", "icone");
   }
-  textfinal.textContent = NbreReussite + "/15";
+  textResultat.textContent = nbreReussite + "/15";
   document.querySelector(".name-resultat").textContent = nom.value;
   document.querySelector(".mail-resultat").textContent = email.value;
-  globalop.style.display = "none";
-  globalR.style.display = "block";
+  globalQuestions.style.display = "none";
+  globalResultat.style.display = "block";
 }
 //button quitter
-quitter.addEventListener("click", function () {
-  Affichage();
+btnQuitter.addEventListener("click", function () {
+  affichageResultat();
 });
 
-/* appel de la deuxième page */
 btnCommencer.addEventListener("click", function (event) {
   event.preventDefault();
-  valid();
-  //disparaitre les textes après ecriture
-  nom.addEventListener("keypress", function () {
-    erreurName.style.display = "none";
-  });
-  email.addEventListener("keypress", function () {
-    erreurEmail.style.display = "none";
-  });
+  validation();
 });
-//fonction pour rafraichir la page
-function refresh() {
+
+nom.addEventListener("keypress", function () {
+  erreurName.style.display = "none";
+});
+email.addEventListener("keypress", function () {
+  erreurEmail.style.display = "none";
+});
+
+function rafraichirPage() {
   location.reload();
 }
-//fonction de la validation
-function valid() {
-  const erreurName = document.querySelector(".erreur-nom");
-  const erreurEmail = document.querySelector(".erreur-mail");
+
+function validation() {
   if (nom.value == "") {
     erreurName.style.display = "block";
     nom.classList.add("inputborder");
-    setTimeout(refresh, 1500);
+    setTimeout(rafraichirPage, 1500);
   }
   if (email.value == "") {
     erreurEmail.style.display = "block";
     email.classList.add("inputborder");
-    setTimeout(refresh, 1500);
+    setTimeout(rafraichirPage, 1500);
   }
   if (nom.value.length > 20) {
     erreurName.style.display = "block";
     erreurName.textContent = "Votre nom ne doit pas dépasser 25 caractères";
     nom.classList.add("inputborder");
-    setTimeout(refresh, 1500);
+    setTimeout(rafraichirPage, 1500);
   }
   if (email.value != "" && !email.value.includes("@gmail")) {
     erreurEmail.style.display = "block";
     erreurEmail.textContent = "Votre email n'est pas valide";
     email.classList.add("inputborder");
-    setTimeout(refresh, 1500);
+    setTimeout(rafraichirPage, 1500);
   }
   if (nom.value != "" && email.value.includes("@gmail")) {
-    content.style.display = "none";
-    globalop.style.display = "block";
-    iterate("0");
+    global.style.display = "none";
+    globalQuestions.style.display = "block";
+    parcoursQuestions("0");
     debuter();
   }
 }
-//button accueil
-accueil.addEventListener("click", function () {
-  content.style.display = "block";
-  globalR.style.display = "none";
+
+btnaccueil.addEventListener("click", function () {
+  global.style.display = "block";
+  globalResultat.style.display = "none";
   location.reload();
 });
-/* fonction reset radio */
+
 function reset_radio(id_global) {
   let id_glo = document.getElementById(id_global);
 
   if (id_glo) {
     let tab = new Array();
     tab = document.getElementsByTagName("input");
-    //liste des éléments du tableau
     for (let i = 0; i < tab.length; i++) {
-      //si la balise est du type radio
       if (tab[i].type == "radio") tab[i].checked = false;
     }
   }
 }
-/* fonction verification réponse */
+
 function ischecked(id) {
-  const op2 = document.querySelector("#option2");
-  const op1 = document.querySelector("#option1");
-  const op3 = document.querySelector("#option3");
-  const op4 = document.querySelector("#option4");
   let result;
-  if (op1.checked == true) result = Questions[id].a[0].isCorrect;
-  else if (op2.checked == true) result = Questions[id].a[1].isCorrect;
-  else if (op3.checked == true) result = Questions[id].a[2].isCorrect;
-  else if (op4.checked == true) result = Questions[id].a[3].isCorrect;
+  if (option1.checked == true) result = Questions[id].assertions[0].isCorrect;
+  else if (option2.checked == true)
+    result = Questions[id].assertions[1].isCorrect;
+  else if (option3.checked == true)
+    result = Questions[id].assertions[2].isCorrect;
+  else if (option4.checked == true)
+    result = Questions[id].assertions[3].isCorrect;
 
   return result;
 }
-/* function progress bar */
-var intervalId = null;
+
+let intervalId = null;
 
 function debuter() {
-  //s'il existe une intervalle annule
   if (intervalId) {
     clearInterval(intervalId);
   }
-  const progress = document.querySelector("#progress");
-  const time = document.querySelector(".time-counter");
-  let counter = 60;
+  let conteur = 60;
+
+  function recupererId() {
+    for (let i = 0; i < Questions.length; i++) {
+      if (labelOption1.textContent == Questions[i].assertions[0].text) {
+        var id = Questions[i].id;
+      }
+    }
+    return id;
+  }
 
   function progression() {
-    counter--;
-    if (counter == -1) {
+    conteur--;
+    if (conteur == -1) {
       clearInterval(intervalId);
-      //recupère contenu label(radio) 1
-      for (let i = 0; i < Questions.length; i++) {
-        if (op1lbl.textContent == Questions[i].a[0].text) {
-          var takeid = Questions[i].id;
-        }
-      }
-      //si on a pas atteint la fin
+      let idrecu = recupererId();
       if (id < 14) {
-        resetborder();
-        resetbulle();
-        iterate(takeid + 1);
-        text.textContent = takeid + 2 + "/15";
+        annulerBordure();
+        ModifierBulle();
+        parcoursQuestions(idrecu + 1);
+        numeroQuestion.textContent = idrecu + 2 + "/15";
         debuter();
-
-        result = ischecked(id);
-        id++; //
-        //Test de l'assertion coché
-        if (result == true) NbreReussite++; //
+        resultat = ischecked(id);
+        id++;
+        if (resultat == true) nbreReussite++; //
+        chargerTexteButton();
         reset_radio("radios");
         inaccessButtonTimer();
       } else {
-        id = 14; //14
-        result = ischecked(id);
-        if (result == true) NbreReussite++; //
-        Affichage();
+        derniereQuestion();
       }
     } else {
-      time.textContent = counter;
-      progress.style.width = counter * 1.6667 + "%";
+      time.textContent = conteur;
+      progress.style.width = conteur * 1.6667 + "%";
     }
   }
   intervalId = setInterval(progression, 1000); //1000
 }
 
-//rendre le bouton suivant accessible
-const inputs = document.querySelectorAll("input");
-// const bulle = document.querySelector(".spanall");
 for (let i = 0; i < inputs.length; i++) {
   if (inputs[i].type == "radio") {
     inputs[i].addEventListener("click", function () {
-      const next = document.querySelector(".suivant");
+      const btnSuivant = document.querySelector(".suivant");
       const valclass = document.querySelector(".S" + this.id);
-      // alert("valclass = " + valclass);
-      //récuperation de la classe pas d'opacity
-      if (next.disabled == true) {
-        next.style.opacity = "1";
-        next.disabled = false;
+      if (btnSuivant.disabled == true) {
+        btnSuivant.style.opacity = "1";
+        btnSuivant.disabled = false;
       }
-      //si le div contient la classe border (pour cibler le radio qui ale bordure)
-      resetborder();
-      resetbulle();
+      annulerBordure();
+      ModifierBulle();
       if (this.checked == true) {
-        // alert("parent " + this.parentNode);
         this.parentNode.classList.add("borderradio");
         valclass.classList.add("bulle");
       }
     });
   }
 }
-function resetborder() {
-  if (document.querySelector(".div-opt.borderradio")) {
+function annulerBordure() {
+  if (document.querySelector(".conteneur-reponse.borderradio")) {
     document
-      .querySelector(".div-opt.borderradio")
+      .querySelector(".conteneur-reponse.borderradio")
       .classList.remove("borderradio");
   }
 }
-function resetbulle() {
+function ModifierBulle() {
   if (document.querySelector(".all.bulle")) {
     document.querySelector(".all.bulle").classList.remove("bulle");
   }
 }
-//fonction pour rendre le boutton suivant inaccessible
-function inaccessButton() {
-  const next = document.querySelector(".suivant");
-  //si bouton inactif, on active
-  if (next.disabled == true) {
-    next.disabled = false;
-    next.style.opacity = "1";
+function rendreBtnInaccessible() {
+  if (btnSuivant.disabled == true) {
+    btnSuivant.disabled = false;
+    btnSuivant.style.opacity = "1";
   } else {
-    next.disabled = true;
-    next.style.opacity = "0.4";
+    btnSuivant.disabled = true;
+    btnSuivant.style.opacity = "0.4";
   }
 }
 function inaccessButtonTimer() {
-  const next = document.querySelector(".suivant");
-  next.disabled = true;
-  next.style.opacity = "0.4";
+  btnSuivant.disabled = true;
+  btnSuivant.style.opacity = "0.4";
 }
-//fonction d'interdiction des chiffres
-function makeletters(input) {
+
+function effacerChiffre(input) {
   let regex = /[^a-z]/gi;
   input.value = input.value.replace(regex, "");
 }
