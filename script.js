@@ -186,6 +186,9 @@ const inputs = document.querySelectorAll("input");
 const progress = document.querySelector("#progress");
 const time = document.querySelector(".time-counter");
 
+const erreurName = document.querySelector(".erreur-nom");
+const erreurEmail = document.querySelector(".erreur-mail");
+
 function parcoursQuestions(id) {
   question.textContent = Questions[id].question;
   labelOption1.textContent = Questions[id].assertions[0].text;
@@ -288,9 +291,9 @@ function validation() {
     email.classList.add("inputborder");
     setTimeout(rafraichirPage, 1500);
   }
-  if (nom.value.length > 20) {
+  if (nom.value.length < 2) {
     erreurName.style.display = "block";
-    erreurName.textContent = "Votre nom ne doit pas dépasser 25 caractères";
+    erreurName.textContent = "Votre doit contenir au moins deux caractères";
     nom.classList.add("inputborder");
     setTimeout(rafraichirPage, 1500);
   }
@@ -300,7 +303,7 @@ function validation() {
     email.classList.add("inputborder");
     setTimeout(rafraichirPage, 1500);
   }
-  if (nom.value != "" && email.value.includes("@gmail")) {
+  if (nom.value != "" && email.value.includes("@gmail") && nom.value.length >= 2) {
     global.style.display = "none";
     globalQuestions.style.display = "block";
     parcoursQuestions("0");
