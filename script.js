@@ -271,39 +271,37 @@ btnCommencer.addEventListener("click", function (event) {
 
 nom.addEventListener("keypress", function () {
   erreurName.style.display = "none";
+  nom.style.border = "1px solid #dddddd";
 });
 email.addEventListener("keypress", function () {
   erreurEmail.style.display = "none";
+  email.style.border = "1px solid #dddddd";
 });
 
-function rafraichirPage() {
-  location.reload();
-}
+// function rafraichirPage() {
+//   location.reload();
+// }
 
 function validation() {
   if (nom.value == "") {
     erreurName.style.display = "block";
     nom.classList.add("inputborder");
-    setTimeout(rafraichirPage, 1500);
   }
   if (email.value == "") {
     erreurEmail.style.display = "block";
     email.classList.add("inputborder");
-    setTimeout(rafraichirPage, 1500);
   }
   if (nom.value.length < 2) {
     erreurName.style.display = "block";
     erreurName.textContent = "Votre doit contenir au moins deux caractères";
     nom.classList.add("inputborder");
-    setTimeout(rafraichirPage, 1500);
   }
-  if (email.value != "" && !email.value.includes("@gmail")) {
+  if (email.value != "" && !email.value.includes("@gmail.com")) {
     erreurEmail.style.display = "block";
     erreurEmail.textContent = "Votre email n'est pas valide";
     email.classList.add("inputborder");
-    setTimeout(rafraichirPage, 1500);
   }
-  if (nom.value != "" && email.value.includes("@gmail") && nom.value.length >= 2) {
+  if (nom.value != "" && email.value.includes("@gmail.com") && nom.value.length >= 2) {
     global.style.display = "none";
     globalQuestions.style.display = "block";
     parcoursQuestions("0");
